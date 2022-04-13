@@ -7,7 +7,7 @@ public class CarsUtils {
 
     public static ArrayList<Car> detectCars(String rawCarsString){
 
-        ArrayList<Car> carList=new ArrayList<>();
+        ArrayList<Car> carList = new ArrayList<>();
         for(String rawCarString:rawCarsString.split(", ")){
             carList.add(new Car(rawCarString));
         }
