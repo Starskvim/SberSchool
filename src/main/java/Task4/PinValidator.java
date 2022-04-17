@@ -6,9 +6,9 @@ import Task4.TerminalExceptions.TerminalIsBlockedException;
 
 import java.time.Instant;
 
+import static Task4.Constant.*;
+
 public class PinValidator {
-    private static final int MAX_ATTEMPTS_COUNT = 3;
-    private static final int BLOCK_TIME_SEC = 10;
 
     private int currentAttempts;
     private boolean isLocked;
@@ -24,7 +24,7 @@ public class PinValidator {
     }
 
     private String getPinFromProvider() {
-        return "0123";
+        return VALIDE_PIN;
     }
 
     private boolean isCorrectPin(String pin) {

@@ -3,6 +3,7 @@ package Task4;
 import Task4.TerminalExceptions.BadWithdrawAmount;
 
 public class TerminalServer {
+
     private double balance;
 
     public TerminalServer() {

@@ -3,6 +3,7 @@ package Task4;
 import Task4.TerminalExceptions.BadDepositAmount;
 import Task4.TerminalExceptions.BadWithdrawAmount;
 import Task4.TerminalExceptions.TerminalException;
+import org.apache.commons.validator.routines.UrlValidator;
 
 public class TerminalImpl implements Terminal {
     private final TerminalServer server;
@@ -17,6 +18,13 @@ public class TerminalImpl implements Terminal {
         pinValidator.isUnlocked();
     }
 
+    // https://mvnrepository.com/
+    public boolean checkUrl(String input) {
+        UrlValidator urlValidator = new UrlValidator();
+        return urlValidator.isValid(input);
+    }
+
+    // Класть и снимать деньги можно только, если сумма кратна 100.
     private boolean isBadAmount(double amount) {
         return (amount % 100 != 0) || (amount <= 0);
     }

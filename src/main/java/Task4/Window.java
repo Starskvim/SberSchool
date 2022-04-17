@@ -44,7 +44,7 @@ public class Window {
     }
 
     private void deposit(Scanner sc) {
-        do{
+        do {
             System.out.print("Введите сумму:");
             String input = sc.nextLine();
             if (input.equals("stop")) break;
@@ -58,7 +58,7 @@ public class Window {
     }
 
     private void withdraw(Scanner sc) {
-        do{
+        do {
             System.out.print("Введите сумму для выдачи:");
             String input = sc.nextLine();
             if (input.equals("stop")) break;
@@ -68,6 +68,20 @@ public class Window {
             } catch (TerminalException e) {
                 System.out.println(e.getMessage());
             }
+        } while (true);
+    }
+
+    private void checkUrl(Scanner sc) {
+        do {
+            System.out.print("Введите url для проверки:");
+            String input = sc.nextLine();
+            if (input.equals("stop")) break;
+            if(terminal.checkUrl(input)){
+                System.out.println("URL доступен");
+            } else {
+                System.out.println("URL не доступен");
+            }
+            return;
         } while (true);
     }
 
@@ -86,6 +100,7 @@ public class Window {
         System.out.println("1 - Показать доступный баланс");
         System.out.println("2 - Пополнить баланс");
         System.out.println("3 - Вывести средства");
+        System.out.println("4 - Проверка URL");
         String command;
         do {
             System.out.print("Введите команду:");
@@ -100,8 +115,10 @@ public class Window {
                 case "3":
                     withdraw(userInput);
                     break;
+                case "4":
+                    checkUrl(userInput);
                 default:
-                    if(!command.equals("stop"))System.out.println("Неизвестная команда!");
+                    if (!command.equals("stop")) System.out.println("Неизвестная команда!");
             }
         } while ((!command.equals("stop")));
     }

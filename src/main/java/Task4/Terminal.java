@@ -8,4 +8,5 @@ public interface Terminal {
     void withdraw(double amount) throws TerminalException;
     void deposit(double amount) throws TerminalException;
     void isUnlocked() throws TerminalException;
+    boolean checkUrl(String input);
 }
