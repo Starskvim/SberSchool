@@ -1,7 +1,5 @@
 package Task3.LinkedList;
 
-
-import java.util.Collection;
 import java.util.Iterator;
 
 public interface LinkedList<T> {
@@ -16,8 +14,9 @@ public interface LinkedList<T> {
 
     Iterator<T> iterator();
 
-    boolean addAll (Collection<T> collection);
+    boolean addAll (LinkedList<T> collection);
 
-    boolean copy(Collection<T> collection);
+    LinkedList<T> copy(LinkedList<T> collection);
 
+    Long size();
 }
