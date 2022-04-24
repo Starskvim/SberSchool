@@ -24,7 +24,7 @@ public class PerfomanceProxy implements Calculator {
         if (isMetric) {
             long startTime = System.nanoTime();
             int result = calculator.calc(number);
-            System.out.println("Затрачено секунд:"+(System.nanoTime() - startTime) / 1_000_000_000.0);
+            System.out.println("Затрачено секунд:" + (System.nanoTime() - startTime) / 1_000_000_000.0);
             return result;
         } else {
             return calculator.calc(number);

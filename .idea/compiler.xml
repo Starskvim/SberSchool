@@ -2,12 +2,23 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Maven default annotation processors profile" enabled="true">
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Annotation profile for SberSchool" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SberSchool" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar" />
+        </processorPath>
+        <module name="main-service" />
+        <module name="route-service" />
+        <module name="account-service" />
+        <module name="message-service" />
+        <module name="image-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="route-service" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
