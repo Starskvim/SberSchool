@@ -15,6 +15,7 @@
         <module name="account-service" />
         <module name="message-service" />
         <module name="image-service" />
+        <module name="Task7" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
