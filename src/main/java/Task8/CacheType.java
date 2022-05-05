@@ -1,4 +1,4 @@
-package Task7;
+package Task8;
 
 public enum CacheType {
     IN_FILE,

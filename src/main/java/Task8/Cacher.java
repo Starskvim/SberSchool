@@ -1,4 +1,4 @@
-package Task7;
+package Task8;
 
 import java.io.File;
 import java.lang.reflect.InvocationHandler;
