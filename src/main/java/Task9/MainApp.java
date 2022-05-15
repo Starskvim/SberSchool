@@ -5,6 +5,8 @@ import Task9.Stream.MyStream;
 
 public class MainApp {
 
+
+
     public static void main(String[] args) {
         MyStream<Integer> integerStream = MyStream.of(1, 2, 2, 3, 4, 5, 6, 7, 8, 8, 9).filter(i -> i%2 == 0).map(i
                 -> i*i).distinct();
